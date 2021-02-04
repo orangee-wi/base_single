@@ -1,0 +1,21 @@
+server:
+  port: 8001 #服务端口
+
+#token配置
+jwt:
+  secret: orangee
+  tokenHeader: Authorization
+  expiration: 86400 #单位秒 86400秒=1天
+
+spring:
+  #数据源配置
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3306/single?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+      username: root
+      password: 1qaz2wsx
+      max-active: 20 #连接池
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis-plus配置控制台打印完整带参数SQL语句
